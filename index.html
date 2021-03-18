@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Taskinio</title>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <section class="top-bar row">
+      <div class="col-sm-12 container fluid">
+
+      </div>
+      <div class="col-sm-12 container fluid">
+        <ul class="buttons">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <section class="row product"> 
+      <div class="col-sm-12 col-md-6">
+        <div class="product-left"></div>
+      </div>
+      <div class="product-right col-sm-12">
+        <div class="product-header">
+          <img src="./images/Image 1.svg">
+          <h2>
+            Bambusowe Naczynia dla Dzieci Ambition Junior Alex
+          </h2>
+          <p>5904134571342</p>
+        </div>
+        <div class="colors-row">
+          <h3>Kolory</h3>
+          <div class="colors row">
+              <div class=" col-sm-1">
+                <div class="color-outer">
+                  <div class="color-a">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-1">
+                <div class="color-outer">
+                  <div class="color-b">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-1">
+                <div class="color-outer">
+                  <div class="color-c">
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="availability">
+          <h4>Dostępne 3 szt w magazynie</h4>
+          <a>Sprawdz czas i koszt dostawy</a>
+        </div>
+        <div class="price">
+          <h3>29,00</h3>
+          <p>zł/szt.</p>
+          <p class="old-price">39,00 zł</p>
+          <div class="promocja"><h4>PROMOCJA</h4></div>
+        </div>
+        <div class="row installments">
+          <a>kup na raty</a>
+        </div>
+        <div class="row add-to-cart"> 
+          <div class="col-sm-2">
+            <a class="quantity" >1</a>
+          </div>
+          <div class="add-to-cart-button col-sm-9">
+            <a>DODAJ DO KOSZYKA</a>
+          </div>
+        </div>
+        <div class="add-to-wish-list">
+          <a>Do listy zakupowej</a>
+        </div>
+        <div class="product-footer">
+          <div class="row">
+            <img src="/images/fontello/Group 4320.svg"/>
+            <p><b>Łatwy zwrot towaru</b> w ciągu 14 dni</p>
+          </div>
+          <div class="row">
+            <img src="/images/fontello/box (2).svg"/>
+            <p><b>Darmowa dostawa</b> od 599 zł</p>
+          </div>
+          <div class="row">
+            <img src="/images/fontello/shipped (2).svg"/>
+            <p><b>Szybka dostawa w 48h</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="items-available">
+      <div class="row available-item">
+        <div class="item-image-a col-sm-4"></div>
+        <div class="item-description col-sm-7">
+          <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
+          <div class="row availability-count">
+            <div class="green-dot"></div>
+            <p>Dostępne 3 szt.</p>
+          </div>
+          <p><b>29,0 zł / szt.</b></p>
+          <div class="row to-cart"> 
+            <div class="col-sm-2">
+              <a class="quantity" >1</a>
+            </div>
+            <div class="to-cart-button col-sm-8">
+              <a>DO KOSZYKA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row available-item">
+        <div class="item-image-b col-sm-4"></div>
+        <div class="item-description col-sm-7">
+          <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
+          <div class="row availability-count">
+            <div class="green-dot"></div>
+            <p>Dostępne 3 szt.</p>
+          </div>
+          <p><b>29,0 zł / szt.</b></p>
+          <div class="row to-cart"> 
+            <div class="col-sm-2">
+              <a class="quantity" >1</a>
+            </div>
+            <div class="to-cart-button col-sm-8">
+              <a>DO KOSZYKA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row available-item">
+        <div class="item-image-c col-sm-4"></div>
+        <div class="item-description col-sm-7">
+          <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
+          <div class="row availability-count">
+            <div class="green-dot"></div>
+            <p>Dostępne 3 szt.</p>
+          </div>
+          <p><b>29,0 zł / szt.</b></p>
+          <div class="row to-cart"> 
+            <div class="col-sm-2">
+              <a class="quantity" >1</a>
+            </div>
+            <div class="to-cart-button col-sm-8">
+              <a>DO KOSZYKA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="package-section">
+      <div class="package-header">
+        <h2>W zestawie kupisz taniej</h2>
+      </div>
+      <div class="package-images row">
+        <div class="package-item-1 col-sm-4"></div>
+        <div><a class="plus-sign">+</a></div>
+        <div class="package-item-2 col-sm-4"></div>
+      </div>
+      <div class="package-description">
+        <p>Cena produktów poza zestawem 199,00 zł</p>
+        <h3>149,00 / zestaw</h3>
+      </div>
+      <div class="row col-sm-12 check-offer-button"> 
+        <a class=""><b>ZOBACZ OFERTĘ</b></a>
+      </div>
+    </section>
+    <section class="description-section">
+      <div class="description-image"></div>
+      <div>
+        <div class="description-header">
+          <h2>Zestaw naczyń<br/> bambusowych dla dzieci<br/> Alex AMBITION JUNIOR</h2>
+        </div>
+        <div class="description-content">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, unde possimus! Facilis voluptatem, ut consequuntur veniam sed quis fuga consectetur deserunt labore accusantium, perspiciatis nulla earum ipsum veritatis autem tempora neque fugit. Culpa porro est nostrum!<br/><br/>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error laboriosam voluptate quos quod animi odio!<br/><br/>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis temporibus officia.<br/><br/>
+            Lorem ipsum dolor sit amet consectetur.<br/><br/>
+            W skład zestawu wchodzą 3 elementy:<br/><br/>
+            talerz: 21cm<br/>
+            miska: 360ml<br/>
+            kubek: 180ml<br/><br/>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ratione, harum quae quam ut maxime facilis architecto cum impedit eos eligendi laboriosam assumenda consequatur laborum?<br/>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="specifications-section">
+      <div class="specifications-header">
+        <h2>Specyfikacja</h2>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
