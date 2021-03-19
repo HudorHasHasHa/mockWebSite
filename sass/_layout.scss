@@ -184,13 +184,16 @@ ul{
   justify-content: space-between;
   padding: 15px 0;
   .quantity{
-    position: relative;
-    transform: translate(-50%, -50%);
-    top: 34%;
-    left: 0%;
-    padding: 20px 25px;
-    border-radius: 50%;
-    background-color: $color-before;
+    input{
+      width: 57px;
+      height: 55px;
+      text-align: center;
+      margin: 0 0px;
+      padding: 0;
+      border-radius: 50%;
+      border: none;
+      background-color: #F6F6F6;
+    }
   }
 
   .add-to-cart-button{
@@ -282,14 +285,17 @@ ul{
   justify-content: space-between;
   padding: 0 0;
 
-  .quantity{
-    position: relative;
-    transform: translate(-50%, -50%);
-    top: 34%;
-    left: 0%;
-    padding: 12px 18px;
-    border-radius: 50%;
-    background-color: $color-before;
+  .quantity-2{
+    input{
+      width: 50px;
+      height: 47px;
+      text-align: center;
+      margin: 0 0px;
+      padding: 0;
+      border-radius: 50%;
+      border: none;
+      background-color: #F6F6F6;
+    }
   }
 
   .to-cart-button{
@@ -376,7 +382,7 @@ ul{
 .description-section{
   .description-image{
     content: "";
-    background: url(https://imageupscaler.com/UploadedFiles/6053bc9b5d3be2.90363625Processed.png) no-repeat;
+    background: url("https://i.ibb.co/H7bjB2m/thumb-4-Resized.png") no-repeat;
     display: block;
     position: relative;
     background-size: cover;
@@ -407,8 +413,24 @@ ul{
   }
 }
 
+.section-header{
+  border-bottom: 1px solid $color-before;
+  margin-top: 45px;
+  text-align: center;
+
+  &:after{
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background-color: orange;
+    position: absolute;
+  }
+}
+
 .specifications-section{
-  .specifications-header{
+  .section-header{
     border-bottom: 1px solid $color-before;
     margin-top: 45px;
     text-align: center;
@@ -423,6 +445,114 @@ ul{
       position: absolute;
     }
   }
+  .specifications-content > *{
+    font-size: 12px;
+  }
+
+  .ambition{
+    p{
+      text-decoration: underline;
+    }
+  }
+
+  .download-link{
+    justify-content: center;
+    font-size: 14px;
+  }
 }
 
+.bestsellers-section{
+  padding-top: 1px;
+  margin-top: 50px;
+  background-color: $color-before;
+  padding-bottom: 10px;
 
+  .section-header{
+    margin-bottom: 25px;
+  }
+  
+  .bestsellers-content .row{
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  // .bestseller-description{
+  //   position: relative;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%,-50%);
+  //   width: 90%;
+  //   align-items: center;
+  // }
+
+  .bestseller-item{
+    background-color: #FFF;
+    .bestseller-image-a{
+      content: "";
+      background: url('https://i.ibb.co/8jMzdYD/hs-1.png') no-repeat;
+      display: block;
+      position: relative;
+      padding-bottom: 99%;
+      width: 100%;
+      margin-top: 35px;
+      outline-offset: 20px;
+      background-size: 90%;
+      background-position-x: center;
+      border-bottom: 1px solid $color-before;
+    }
+    .bestseller-image-b{
+      content: "";
+      background: url('https://i.ibb.co/zNZ4jvh/hs-2.png') no-repeat;
+      display: block;
+      position: relative;
+      background-size: 90%;
+      background-position-x: center;
+      padding-bottom: 99%;
+      width: 100%;
+      margin-top: 35px;
+      border-bottom: 1px solid $color-before;
+    }
+    .bestseller-image-c{
+      content: "";
+      background: url('https://i.ibb.co/wzTKk4x/hs-4.png') no-repeat;
+      display: block;
+      position: relative;
+      background-size: 90%;
+      background-position-x: center;
+      padding-bottom: 99%;
+      width: 100%;
+      margin-top: 35px;
+      border-bottom: 1px solid $color-before;
+    }
+    .bestseller-description{
+      p{
+        text-align: center;
+      }
+    }
+  }
+}
+
+footer{
+  background-color: $buttons-background;
+  padding-top: 20px;
+
+  ul{ 
+    list-style: none;
+    padding: 0;
+    li{
+      margin: 0;
+      padding-bottom: 7px;
+    }
+  }
+  > *{
+    color: white;
+    text-align: center;
+  }
+
+  .logos{
+    justify-content: center;
+    .row{
+      justify-content: space-between;
+    }
+  }
+}

@@ -402,13 +402,14 @@ ul {
   padding: 15px 0;
 }
 
-.add-to-cart .quantity {
-  position: relative;
-  transform: translate(-50%, -50%);
-  top: 34%;
-  left: 0%;
-  padding: 20px 25px;
+.add-to-cart .quantity input {
+  width: 57px;
+  height: 55px;
+  text-align: center;
+  margin: 0 0px;
+  padding: 0;
   border-radius: 50%;
+  border: none;
   background-color: #F6F6F6;
 }
 
@@ -499,13 +500,14 @@ ul {
   padding: 0 0;
 }
 
-.to-cart .quantity {
-  position: relative;
-  transform: translate(-50%, -50%);
-  top: 34%;
-  left: 0%;
-  padding: 12px 18px;
+.to-cart .quantity-2 input {
+  width: 50px;
+  height: 47px;
+  text-align: center;
+  margin: 0 0px;
+  padding: 0;
   border-radius: 50%;
+  border: none;
   background-color: #F6F6F6;
 }
 
@@ -593,7 +595,7 @@ ul {
 
 .description-section .description-image {
   content: "";
-  background: url(https://imageupscaler.com/UploadedFiles/6053bc9b5d3be2.90363625Processed.png) no-repeat;
+  background: url("https://i.ibb.co/H7bjB2m/thumb-4-Resized.png") no-repeat;
   display: block;
   position: relative;
   background-size: cover;
@@ -623,13 +625,13 @@ ul {
   text-align: center;
 }
 
-.specifications-section .specifications-header {
+.section-header {
   border-bottom: 1px solid #F6F6F6;
   margin-top: 45px;
   text-align: center;
 }
 
-.specifications-section .specifications-header:after {
+.section-header:after {
   content: "";
   left: 50%;
   transform: translateX(-50%);
@@ -637,5 +639,130 @@ ul {
   height: 1px;
   background-color: orange;
   position: absolute;
+}
+
+.specifications-section .section-header {
+  border-bottom: 1px solid #F6F6F6;
+  margin-top: 45px;
+  text-align: center;
+}
+
+.specifications-section .section-header:after {
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: orange;
+  position: absolute;
+}
+
+.specifications-section .specifications-content > * {
+  font-size: 12px;
+}
+
+.specifications-section .ambition p {
+  text-decoration: underline;
+}
+
+.specifications-section .download-link {
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 14px;
+}
+
+.bestsellers-section {
+  padding-top: 1px;
+  margin-top: 50px;
+  background-color: #F6F6F6;
+  padding-bottom: 10px;
+}
+
+.bestsellers-section .section-header {
+  margin-bottom: 25px;
+}
+
+.bestsellers-section .bestsellers-content .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+.bestsellers-section .bestseller-item {
+  background-color: #FFF;
+}
+
+.bestsellers-section .bestseller-item .bestseller-image-a {
+  content: "";
+  background: url("https://i.ibb.co/8jMzdYD/hs-1.png") no-repeat;
+  display: block;
+  position: relative;
+  padding-bottom: 99%;
+  width: 100%;
+  margin-top: 35px;
+  outline-offset: 20px;
+  background-size: 90%;
+  background-position-x: center;
+  border-bottom: 1px solid #F6F6F6;
+}
+
+.bestsellers-section .bestseller-item .bestseller-image-b {
+  content: "";
+  background: url("https://i.ibb.co/zNZ4jvh/hs-2.png") no-repeat;
+  display: block;
+  position: relative;
+  background-size: 90%;
+  background-position-x: center;
+  padding-bottom: 99%;
+  width: 100%;
+  margin-top: 35px;
+  border-bottom: 1px solid #F6F6F6;
+}
+
+.bestsellers-section .bestseller-item .bestseller-image-c {
+  content: "";
+  background: url("https://i.ibb.co/wzTKk4x/hs-4.png") no-repeat;
+  display: block;
+  position: relative;
+  background-size: 90%;
+  background-position-x: center;
+  padding-bottom: 99%;
+  width: 100%;
+  margin-top: 35px;
+  border-bottom: 1px solid #F6F6F6;
+}
+
+.bestsellers-section .bestseller-item .bestseller-description p {
+  text-align: center;
+}
+
+footer {
+  background-color: #346D99;
+  padding-top: 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0;
+  padding-bottom: 7px;
+}
+
+footer > * {
+  color: white;
+  text-align: center;
+}
+
+footer .logos {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+footer .logos .row {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */
