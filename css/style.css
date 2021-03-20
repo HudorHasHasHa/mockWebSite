@@ -351,6 +351,7 @@ ul {
   background-size: 100%;
   content: "";
   padding-bottom: 100%;
+  background-position: center;
 }
 
 .availability h4 {
@@ -394,6 +395,10 @@ ul {
 
 .add-to-cart > * {
   display: inline-block;
+}
+
+input:focus {
+  outline: none;
 }
 
 .add-to-cart {
@@ -454,6 +459,7 @@ ul {
   content: "";
   padding-bottom: 20%;
   margin: 0;
+  background-position: center;
 }
 
 .items-available .item-image-b {
@@ -464,6 +470,7 @@ ul {
   content: "";
   padding-bottom: 20%;
   margin: 0;
+  background-position: center;
 }
 
 .items-available .item-image-c {
@@ -474,6 +481,7 @@ ul {
   content: "";
   padding-bottom: 20%;
   margin: 0;
+  background-position: center;
 }
 
 .items-available p {
@@ -602,6 +610,7 @@ ul {
   padding-bottom: 99%;
   width: 100%;
   margin-top: 35px;
+  background-position: center;
 }
 
 .description-section .description-header {
@@ -702,7 +711,7 @@ ul {
   margin-top: 35px;
   outline-offset: 20px;
   background-size: 90%;
-  background-position-x: center;
+  background-position: center;
   border-bottom: 1px solid #F6F6F6;
 }
 
@@ -712,7 +721,7 @@ ul {
   display: block;
   position: relative;
   background-size: 90%;
-  background-position-x: center;
+  background-position: center;
   padding-bottom: 99%;
   width: 100%;
   margin-top: 35px;
@@ -725,7 +734,7 @@ ul {
   display: block;
   position: relative;
   background-size: 90%;
-  background-position-x: center;
+  background-position: center;
   padding-bottom: 99%;
   width: 100%;
   margin-top: 35px;
