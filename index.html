@@ -5,29 +5,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fontello/css/fontello.css">
   <title>Taskinio</title>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </head>
 <body>
+  <section class="top-bar row">
+    <div class="col-sm-6">
+      <img class="col-sm-12" src="/images/logo.svg"/>
+    </div>
+    <div class="col-sm-6 row">
+      <div class="col-sm-3 top-bar-icons"><a><img src="/images/fontello/search.svg"/></a></div>
+      <div class="col-sm-3 top-bar-icons"><a><img src="/images/fontello/basket.svg"/></a></div>
+      <div class="top-bar-hamburger"><a><i class="demo-icon icon-menu"></i></a></div>
+    </div>
+  </section>
+  <nav class="navigation row">
+    <a class="col-sm-3"><i class="demo-icon icon-left-open-mini"></i> Wstecz</a>
+    <div class="border"></div>
+    <div class="col-sm-8 row nav-links">
+      <p>Jesteś tutaj: &nbsp;</p>
+      <a><u>Czujniki ruchu alarmowe</u></a>
+      <i></i>
+      <p>Wynik</p>
+    </div>
+  </nav>
   <div class="container-fluid">
-    <section class="top-bar row">
-      <div class="col-sm-12 container fluid">
-
-      </div>
-      <div class="col-sm-12 container fluid">
-        <ul class="buttons">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </section>
     <section class="row product"> 
-      <div class="col-sm-12 col-md-6">
-        <div class="product-left"></div>
+      <div class="col-sm-12 col-md-8 col-xl-8">
+        <div class="product-left col-xl-12"></div>
       </div>
-      <div class="product-right col-sm-12">
-        <div class="product-header">
+      <div class="product-right col-sm-12 col-md-4 col-xl-4">
+        <div class="product-header col-xl-12">
           <img src="./images/Image 1.svg">
           <h2>
             Bambusowe Naczynia dla Dzieci Ambition Junior Alex
@@ -91,10 +100,10 @@
         </div>
       </div>
     </section>
-    <section class="items-available">
-      <div class="row available-item">
-        <div class="item-image-a col-sm-4"></div>
-        <div class="item-description col-sm-7">
+    <section class="items-available row">
+      <div class="row available-item col-md-3 available-md-border">
+        <div class="item-image-a col-sm-4 col-md-4"></div>
+        <div class="item-description col-sm-7 col-md-8">
           <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
           <div class="row availability-count">
             <div class="green-dot"></div>
@@ -102,16 +111,16 @@
           </div>
           <p><b>29,0 zł / szt.</b></p>
           <div class="row to-cart"> 
-            <div class="col-sm-2 quantity-2">
+            <div class="col-sm-2 quantity-2 col-md-2">
               <input value="1" min="1" max="9" type="number">
             </div>
-            <div class="to-cart-button col-sm-8">
+            <div class="to-cart-button col-sm-8 col-md-7">
               <a>DO KOSZYKA</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="row available-item">
+      <div class="row available-item col-md-3 available-md-border">
         <div class="item-image-b col-sm-4"></div>
         <div class="item-description col-sm-7">
           <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
@@ -130,7 +139,7 @@
           </div>
         </div>
       </div>
-      <div class="row available-item">
+      <div class="row available-item col-md-3">
         <div class="item-image-c col-sm-4"></div>
         <div class="item-description col-sm-7">
           <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
@@ -154,17 +163,23 @@
       <div class="package-header">
         <h2>W zestawie kupisz taniej</h2>
       </div>
-      <div class="package-images row">
-        <div class="package-item-1 col-sm-4"></div>
-        <div><a class="plus-sign">+</a></div>
-        <div class="package-item-2 col-sm-4"></div>
-      </div>
-      <div class="package-description">
-        <p>Cena produktów poza zestawem 199,00 zł</p>
-        <h3>149,00 / zestaw</h3>
-      </div>
-      <div class="row col-sm-12 check-offer-button"> 
-        <a class=""><b>ZOBACZ OFERTĘ</b></a>
+      <div class="row col-md-12">
+        <div class="package-images row col-md-6">
+          <div class="package-item-1 col-sm-4 col-md-4"></div>
+          <div><a class="plus-sign">+</a></div>
+          <div class="package-item-2 col-sm-4 col-md-4"></div>
+        </div>
+        <div class="col-md-6 row">
+          <div class="package-description col-md-7">
+            <div class="package-description-inner">
+              <p>Cena produktów poza zestawem 199,00 zł</p>
+              <h3>149,00 / zestaw</h3>
+            </div>
+          </div>
+          <div class="row col-sm-12 check-offer-button col-md-4"> 
+            <a class=""><b>ZOBACZ OFERTĘ</b></a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="description-section">
@@ -317,7 +332,6 @@
         <p>pn-pt 8:00-16:00 <br>sb 8:00-14:00</p>
       </div>
       <div class="partners-icons">
-        <img src="/images/fontello/"/>
       </div>
     </footer>
   </div>
