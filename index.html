@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/fontello/css/fontello.css">
   <title>Taskinio</title>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <section class="top-bar row">
@@ -20,6 +22,19 @@
       <div class="top-bar-hamburger"><a><i class="demo-icon icon-menu"></i></a></div>
     </div>
   </section>
+  <nav class="desktop-nav">
+    <div class="row">
+      <div class="desktop-nav-list col-md-12 row">
+          <a href="#">DOM</a>
+          <a href="#">DZIECKO</a>
+          <a href="#">ELEKTRONIKA</a>
+          <a href="#">KUCHNIA</a>
+          <a href="#">PREZENT</a>
+          <a href="#">NARZĘDZIA I BHP</a>
+          <a href="#">WYPRZEDAŻ</a>
+      </div>
+    </div>
+  </nav>
   <nav class="navigation row">
     <a class="col-sm-3"><i class="demo-icon icon-left-open-mini"></i> Wstecz</a>
     <div class="border"></div>
@@ -32,20 +47,27 @@
   </nav>
   <div class="container-fluid">
     <section class="row product"> 
-      <div class="col-sm-12 col-md-8 col-xl-8">
-        <div class="product-left col-xl-12"></div>
+      <div class="col-sm-12 col-md-8">
+        <div class="gallery col-md-2">
+          <ul>
+            <div></div>
+          </ul>
+        </div>
+        <div class="product-left col-md-10"></div>
       </div>
       <div class="product-right col-sm-12 col-md-4 col-xl-4">
-        <div class="product-header col-xl-12">
-          <img src="./images/Image 1.svg">
-          <h2>
-            Bambusowe Naczynia dla Dzieci Ambition Junior Alex
-          </h2>
+        <div class="product-header">
+          <div class="row desktop-product-header">
+            <img class="col-md-5" src="./images/Image 1.svg">
+            <h2 class="col-md-7">
+              Bambusowe Naczynia dla Dzieci Ambition Junior Alex
+            </h2>
+          </div>
           <p>5904134571342</p>
         </div>
         <div class="colors-row">
           <h3>Kolory</h3>
-          <div class="colors row col-sm-4">
+          <div class="colors row col-sm-12 col-md-12">
               <div class="color-outer">
                 <div class="color-a">
                 </div>
@@ -93,7 +115,7 @@
             <img src="/images/fontello/box (2).svg"/>
             <p><b>Darmowa dostawa</b> od 599 zł</p>
           </div>
-          <div class="row">
+          <div class="row shipped">
             <img src="/images/fontello/shipped (2).svg"/>
             <p><b>Szybka dostawa w 48h</b></p>
           </div>
@@ -101,9 +123,10 @@
       </div>
     </section>
     <section class="items-available row">
-      <div class="row available-item col-md-3 available-md-border">
+      <div class="row col-sm-12 col-md-12 items-available-header"><h3>Dostępne warianty</h3></div>
+      <div class="row available-item col-sm-12 col-md-3 available-md-border">
         <div class="item-image-a col-sm-4 col-md-4"></div>
-        <div class="item-description col-sm-7 col-md-8">
+        <div class="item-description col-sm-8 col-md-8">
           <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
           <div class="row availability-count">
             <div class="green-dot"></div>
@@ -114,15 +137,15 @@
             <div class="col-sm-2 quantity-2 col-md-2">
               <input value="1" min="1" max="9" type="number">
             </div>
-            <div class="to-cart-button col-sm-8 col-md-7">
+            <div class="to-cart-button col-sm-8 col-md-8">
               <a>DO KOSZYKA</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="row available-item col-md-3 available-md-border">
+      <div class="row available-item col-sm-12 col-md-3 available-md-border">
         <div class="item-image-b col-sm-4"></div>
-        <div class="item-description col-sm-7">
+        <div class="item-description col-sm-8">
           <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
           <div class="row availability-count">
             <div class="green-dot"></div>
@@ -139,9 +162,9 @@
           </div>
         </div>
       </div>
-      <div class="row available-item col-md-3">
+      <div class="row available-item col-sm-12 col-md-3">
         <div class="item-image-c col-sm-4"></div>
-        <div class="item-description col-sm-7">
+        <div class="item-description col-sm-8">
           <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
           <div class="row availability-count">
             <div class="green-dot"></div>
@@ -163,30 +186,30 @@
       <div class="package-header">
         <h2>W zestawie kupisz taniej</h2>
       </div>
-      <div class="row col-md-12">
-        <div class="package-images row col-md-6">
-          <div class="package-item-1 col-sm-4 col-md-4"></div>
+      <div class="row col-md-12 package-content">
+        <div class="package-images col-sm-12 row col-md-6">
+          <div class="package-item-1 col-sm-4 col-md-5"></div>
           <div><a class="plus-sign">+</a></div>
-          <div class="package-item-2 col-sm-4 col-md-4"></div>
+          <div class="package-item-2 col-sm-4 col-md-5"></div>
         </div>
-        <div class="col-md-6 row">
-          <div class="package-description col-md-7">
+        <div class="col-md-6 col-sm-12 row">
+          <div class="package-description col-sm-12 col-md-7">
             <div class="package-description-inner">
               <p>Cena produktów poza zestawem 199,00 zł</p>
               <h3>149,00 / zestaw</h3>
             </div>
           </div>
-          <div class="row col-sm-12 check-offer-button col-md-4"> 
+          <div class="row col-sm-6 check-offer-button col-md-4"> 
             <a class=""><b>ZOBACZ OFERTĘ</b></a>
           </div>
         </div>
       </div>
     </section>
-    <section class="description-section">
-      <div class="description-image"></div>
-      <div>
+    <section class="description-section row">
+      <div class="description-image col-md-5"></div>
+      <div class="col-md-6">
         <div class="description-header">
-          <h2>Zestaw naczyń<br/> bambusowych dla dzieci<br/> Alex AMBITION JUNIOR</h2>
+          <h2>Zestaw naczyń bambusowych dla dzieci Alex AMBITION JUNIOR</h2>
         </div>
         <div class="description-content">
           <p>
@@ -208,57 +231,59 @@
         <h2>Specyfikacja</h2>
       </div>
       <div class="specifications-content">
-        <div class="row">
-          <div class="col-sm-6 key"><p>Producent:</p></div>
-          <div class="col-sm-6 value ambition"><p>Ambition</p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Producent:</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p>Ambition</p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Gwarancja:</p></div>
-          <div class="col-sm-6 value"><p><b>2 lata</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Gwarancja:</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>2 lata</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Przeznaczenie</p></div>
-          <div class="col-sm-6 value"><p><b>przedszkola, dzieci żłobkowe</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Przeznaczenie</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>przedszkola, dzieci żłobkowe</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Wymiar</p></div>
-          <div class="col-sm-6 value"><p><b>33m2 (aham cadr - 15m2)</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Wymiar</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>33m2 (aham cadr - 15m2)</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Materiał</p></div>
-          <div class="col-sm-6 value"><p><b>aluminium</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Materiał</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>aluminium</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Zużycie energii (w)</p></div>
-          <div class="col-sm-6 value"><p><b>4-40</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Zużycie energii (w)</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>4-40</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Zasilanie</p></div>
-          <div class="col-sm-6 value"><p><b>230v/50hz</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Zasilanie</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>230v/50hz</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Ilość trybów pracy</p></div>
-          <div class="col-sm-6 value"><p><b>4</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Ilość trybów pracy</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>4</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 key"><p>Czujnik ruchu</p></div>
-          <div class="col-sm-6 value"><p><b>z czujnikiem</b></p></div>
+        <div class="row spec-wrapper">
+          <div class="col-sm-6 col-md-3 key row"><p>Czujnik ruchu</p></div>
+          <div class="col-sm-6 col-md-3 value row"><p><b>z czujnikiem</b></p></div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 download"><p><b>Pliki do pobrania:</b></p></div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 download-link">
-            <a>
-              <img src="/images/fontello/download.svg"/>
-              <u>Katalog producenta</u>
-            </a>
+        <div class="row downloads">
+          <div class="row col-lg-2 col-md-2 col-sm-12">
+            <div class="col-sm-12 download"><p><b>Pliki do pobrania:</b></p></div>
           </div>
-          <div class="col-sm-6 download-link">
-            <a>
-              <img src="/images/fontello/download.svg"/>
-              <u>Instrukcja obsługi</u>
-            </a>
+          <div class="row  col-lg-4 col-md-5 col-sm-12">
+            <div class="col-sm-6 col-md-6 download-link">
+              <a>
+                <img src="/images/fontello/download.svg"/>
+                <u>Katalog producenta</u>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-6 download-link">
+              <a>
+                <img src="/images/fontello/download.svg"/>
+                <u>Instrukcja obsługi</u>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -267,8 +292,8 @@
       <div class="section-header">
         <h2>Bestsellery</h2>
       </div>
-      <div class="bestsellers-content">
-        <div class="row">
+      <div class="bestsellers-content col-md-12 row">
+        <div class="row col-md-6">
           <div class="col-sm-5 bestseller-item">
             <div class="bestseller-image-a">
             </div>
@@ -286,7 +311,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row col-md-6">
           <div class="col-sm-5 bestseller-item">
             <div class="bestseller-image-c">
             </div>
@@ -307,31 +332,39 @@
       </div>
     </section>
     <footer>
-      <div>
-        <h3>Moje zamówienie</h3>
-        <ul>
-          <li>Status zamówienia</li>
-          <li>Śledzenie przesyłki</li>
-          <li>Chcę zareklamować towar</li>
-          <li>Chcę zwrócić towar</li>
-          <li>Chcę wymienić towar</li>
-        </ul>
-      </div>
-      <div><h3>Moje Konto</h3></div>
-      <div><h3>Regulaminy</h3></div>
-      <div><h3>Informacje</h3></div>
-      <div class="row logos">
-        <div class="row col-sm-4">
-          <div class="col-sm-6"><img src="/images/fontello/facebook-circular-logo (2).svg"/></div>
-          <div class="col-sm-6"><img src="/images/fontello/instagram (7).svg"/></div>
-        <div>
-      </div>
-      <div class="contact">
-        <h3>575848808</h3>
-        <h3>sklep@filikos.pl</h3>
-        <p>pn-pt 8:00-16:00 <br>sb 8:00-14:00</p>
-      </div>
-      <div class="partners-icons">
+      <div class="col-md-12 desktop-footer">
+        <div class="col-md-3">
+          <h3>Moje zamówienie</h3>
+          <ul>
+            <li>Status zamówienia</li>
+            <li>Śledzenie przesyłki</li>
+            <li>Chcę zareklamować towar</li>
+            <li>Chcę zwrócić towar</li>
+            <li>Chcę wymienić towar</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>Moje Konto</h3>
+        </div>
+        <div class="col-md-3">
+          <h3>Regulaminy</h3>
+        </div>
+        <div class="col-md-3">
+          <h3>Informacje</h3>
+          <div class="row logos">
+            <div class="row col-sm-4 col-md-6">
+              <div class="col-sm-6"><a href="#"><img src="/images/fontello/facebook-circular-logo (2).svg"/></a></div>
+              <div class="col-sm-6"><a href="#"><img src="/images/fontello/instagram (7).svg"/></a></div>
+            </div>
+          </div>
+          <div class="contact col-sm-12 col-md-12">
+            <h3>575848808</h3>
+            <h3>sklep@filikos.pl</h3>
+            <p>pn-pt 8:00-16:00 <br>sb 8:00-14:00</p>
+          </div>
+          <div class="partners-icons">
+          </div>
+        </div>
       </div>
     </footer>
   </div>
