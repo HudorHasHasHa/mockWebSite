@@ -5,6 +5,7 @@
 body {
   overflow-x: hidden;
   font-family: "Noto Sans", sans-serif;
+  margin: 0;
 }
 
 .container {
@@ -107,6 +108,10 @@ ul {
       justify-content: flex-end;
 }
 
+.top-bar, .top-bar .mobile-top-bar {
+  margin: 7px 4px;
+}
+
 .top-bar .top-bar-icons {
   color: black;
 }
@@ -139,14 +144,19 @@ ul {
 }
 
 .navigation {
+  margin-top: 5px;
   font-size: 11px;
   background-color: #F6F6F6;
   padding: 8px 0;
 }
 
+.navigation .desktop-navigation {
+  display: none;
+}
+
 .navigation .border {
   border-left: solid 1px black;
-  padding-right: 15px;
+  margin: 0 4px;
 }
 
 .navigation a .border::after {
@@ -974,6 +984,24 @@ footer .logos .row {
   .specifications-section .downloads a {
     position: relative;
     top: 18%;
+  }
+  .navigation {
+    font-size: 0.6em;
+    background-color: #F6F6F6;
+    padding: 8px 0;
+    opacity: 0.7;
+  }
+  .navigation .mobile-navigation {
+    display: none;
+  }
+  .navigation .desktop-navigation {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 15px;
+  }
+  .navigation .desktop-navigation .desktop-navigation-link {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 

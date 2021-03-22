@@ -5,6 +5,7 @@
 body{
   overflow-x:hidden;
   font-family: $noto-sans;
+  margin: 0;
 }
 
 .container {
@@ -53,6 +54,10 @@ ul{
     justify-content: flex-end;
   }
 
+  &, .mobile-top-bar{
+    margin: 7px 4px;
+  }
+
   .top-bar-icons{
     color: black;
 
@@ -84,13 +89,18 @@ ul{
 }
 
 .navigation{
+  margin-top: 5px;
   font-size: 11px;
   background-color: $color-before;
   padding: 8px 0;
 
+  .desktop-navigation{
+    display: none;
+  }
+
   .border{
     border-left: solid 1px black;
-    padding-right: 15px;
+    margin: 0 4px;
   }
 
   a .border::after{
@@ -863,6 +873,24 @@ footer{
       a{
       position: relative;
       top: 18%;
+      }
+    }
+  }
+
+  .navigation{
+    .mobile-navigation{
+      display: none;
+    }
+    font-size: 0.6em;
+    background-color: $color-before;
+    padding: 8px 0;
+    opacity: 0.7;
+
+    .desktop-navigation{
+      display: flex;
+      padding-left: 15px;
+      .desktop-navigation-link{
+        justify-content: space-around;
       }
     }
   }
