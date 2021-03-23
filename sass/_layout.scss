@@ -18,8 +18,7 @@ body{
 
 .container-fluid {
   width: 100%;
-  // padding-left: 15px;
-  // padding-right: 15px;
+  padding: 0 15px;
 }
 
 .row {
@@ -50,12 +49,21 @@ ul{
 }
 
 .top-bar{
+  .desktop-top-bar{
+    display: none;
+  }
   .row{
     justify-content: flex-end;
   }
 
   &, .mobile-top-bar{
     margin: 7px 4px;
+  }
+
+  .top-bar-icons-wrapper{
+    > * {
+      margin: 0 8px;
+    }
   }
 
   .top-bar-icons{
@@ -279,6 +287,7 @@ input:focus {
   margin: 10px 0;
   border-top: 1px solid $color-before;
   border-bottom: 1px solid $color-before;
+  font-size: 0.9em;
   img{
     padding-right: 10px;
   }
@@ -535,6 +544,124 @@ input:focus {
   }
 }
 
+.frequently-asked-questions{
+  .questions-section-header{
+    font-size: 0.8em;
+    h3{
+      font-weight: normal;
+    }
+    a{
+      font-size: 1.4em;
+    }
+    padding: 0 10px;
+    justify-content: space-between;
+
+    .mobile-frequently-button{
+        justify-content: flex-end;
+        a{
+          display: block;
+          position: relative;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+        }
+    }
+  }
+
+  .active .frequently-dropdown{
+    transform: translate(0, 0);
+    max-height: 1000px;
+  }
+
+  @keyframes goDown {
+    0% {
+        transform: scaleY(0)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+  }
+
+  .frequently-dropdown{
+    font-size: 0.7em;
+    transition: all 0.25s ease-in-out;
+    max-height: 0;
+    transform: translate(0, 50%);
+    animation: goDown 300ms ease-in-out forwards;
+    overflow: hidden;
+    > * {
+      border-bottom: 1px solid $color-before;
+    }
+
+    .ask-question{
+      background-color: $color-before; 
+      background-size: 100%;
+    }
+
+    .ask-question-button{
+      justify-content: center;
+      padding: 16px 0;
+      border-radius: 44px;
+      color: $buttons-background;
+      background-color: white;
+      border: 3px solid $buttons-background;
+      font-size: 0.8em;
+      margin-top: 15px;
+      margin: auto;
+      width: 60%;
+    }
+  }
+}
+
+.reviews-section{
+  .reviews-section-header{
+    justify-content: space-between;
+    font-size: 0.8em;
+    padding: 0 10px;
+    h3{
+      font-weight: normal;
+    }
+    a{
+      font-size: 1.4em;
+    }
+  }
+
+  .reviews-button{ 
+    justify-content: flex-end;
+    a {
+      display: block;
+      position: relative;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  .reviews-dropdown{
+    max-height: 0;
+    transform: translate(0, 50%);
+    transition: all 0.25s ease-in-out;
+    animation: goDown 300ms ease-in-out forwards;
+    overflow: hidden;
+  }
+
+  .active .reviews-dropdown{
+    transform: translate(0, 0);
+    max-height: 1000px;
+  }
+}
+
+.mobile-dropdown{
+  justify-content: flex-end;
+  a{
+    display: block;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
 .bestsellers-section{
   padding-top: 1px;
   margin-top: 50px;
@@ -661,6 +788,29 @@ footer{
 @media(min-width: 768px) {
   @include grid('md');
 
+  .top-bar{
+    .top-bar-icons-wrapper{
+      display: none;
+    }
+
+    .desktop-top-bar{
+      display: flex;
+
+      .search{
+        background-color: $color-before;
+        border-radius: 24px;
+        height: 70%;
+        justify-content: space-around;
+
+        input {
+          background-color: $color-before;
+          border: none;
+        }
+      }
+    }
+    
+  }
+
   .desktop-footer{
     display: flex;
     flex-wrap: wrap;
@@ -714,17 +864,28 @@ footer{
   .product{
     font-size: 0.6em;
     margin-bottom: 25px;
-
+    justify-content: space-between;
+    background-color: $color-before;
+    .col-sm-12{
+      max-width: 62%;
+    }
+    .product-left-wrapper{
+      background-color: white;
+      width: 67%;
+    }
     .product-left{
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
     }
 
     .product-right{
+      margin: 0 10px;
+      padding: 0 10px;
+      background-color: white;
       .desktop-product-header{
         flex-direction: row-reverse;
-        
       }
     }
   }
@@ -887,7 +1048,12 @@ footer{
     opacity: 0.7;
 
     .desktop-navigation{
+      > * > *{
+        padding-left: 15px;
+      }
+      font-size: 1.4em;
       display: flex;
+      padding:15px 0;
       padding-left: 15px;
       .desktop-navigation-link{
         justify-content: space-around;

@@ -13,19 +13,19 @@
 </head>
 <body>
   <section class="top-bar row mobile-top-bar">
-    <div class="col-sm-6">
+    <div class="col-sm-6 col-md-4">
       <img class="col-sm-12" src="/images/logo.svg"/>
     </div>
-    <div class="col-sm-6 row">
-        <div class="col-sm-3 top-bar-icons"><a><img src="/images/fontello/search.svg"/></a></div>
-        <div class="col-sm-3 top-bar-icons"><a><img src="/images/fontello/basket.svg"/></a></div>
+    <div class="col-sm-6 row top-bar-icons-wrapper">
+        <div class="top-bar-icons"><a><img src="/images/fontello/search.svg"/></a></div>
+        <div class="top-bar-icons"><a><img src="/images/fontello/basket.svg"/></a></div>
         <div class="top-bar-hamburger"><a><i class="demo-icon icon-menu"></i></a></div>
     </div>
-  </section>
-  <section>
-    <div class="desktop-top-bar row">
-      <div></div>
-
+    <div class="desktop-top-bar row  col-md-8">
+      <div class="search row"><input type="text" name="search"/><img src="/images/fontello/search.svg"/></div>
+      <div><a>Zaloguj się</a></div>
+      <div><a>Lista zakupowa</a></div>
+      <div><output type="number"></output></div>
     </div>
   </section>
   <nav class="desktop-nav">
@@ -52,33 +52,33 @@
         <p>Wynik</p>
       </div>
     </div>
-    <div class="desktop-navigation row col-md-8">
-      <div class="col-md-2 row desktop-navigation-link">
+    <div class="desktop-navigation row col-md-10">
+      <div class="row desktop-navigation-link">
         <div><a>Strona główna</a></div>
         <div><a>/</a></div>
       </div>
-      <div class="col-md-2 row desktop-navigation-link">
+      <div class="row desktop-navigation-link">
         <div><a>Dziecko</a></div>
         <div><a>/</a></div>
       </div>
-      <div class="col-md-3 row desktop-navigation-link">
+      <div class="row desktop-navigation-link">
         <div><a>Zastawa stołowa</a></div>
         <div><a>/</a></div>
       </div>
-      <div class="col-md-4 row desktop-navigation-link">
+      <div class="row desktop-navigation-link">
         <div><a>Bambusowe naczynia dla dzieci</a></div>
       </div>
     </div>
   </nav>
   <div class="container-fluid">
     <section class="row product"> 
-      <div class="col-sm-12 col-md-8">
+      <div class="col-sm-12 product-left-wrapper">
         <div class="gallery col-md-2">
           <ul>
             <div></div>
           </ul>
         </div>
-        <div class="product-left col-md-10"></div>
+        <div class="product-left"></div>
       </div>
       <div class="product-right col-sm-12 col-md-4 col-xl-4">
         <div class="product-header">
@@ -308,6 +308,55 @@
                 <img src="/images/fontello/download.svg"/>
                 <u>Instrukcja obsługi</u>
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="frequently-asked-questions">
+      <div class="frequently-asked-toggle">
+        <div class="questions-section-header row">
+          <h3 class="col-sm-10">Nasi klienci najczęściej pytali o:</h3>
+          <div class="mobile-frequently-button"><a class="">+</a></div>
+        </div>
+        <div class="frequently-dropdown">
+          <div>
+            <h3>Czy te miseczki mają atesty bezpieczeństwa?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet libero nesciunt officia praesentium, animi maxime magni odit voluptatum perferendis placeat?</p>
+          </div>
+          <div>
+            <h3>Czy te produkty są 100% ekologiczne?</h3>
+          </div>
+          <div>
+            <h3>Czy miseczki nie uczulą 6 miesięcznego dziecka?</h3>
+          </div>
+          <div class="ask-question">
+            <h3>Masz pytanie na temat tego produktu?</h3>
+            <p>Nasi specjaliści chętnie udzielą Ci potrzebnych informacji.</p>
+            <div class="row col-sm-6 ask-question-button col-md-4"> 
+              <a class=""><b>ZADAJ PYTANIE</b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews-section"> 
+      <div class="reviews-toggle">
+        <div class="reviews-section-header row">
+          <h3 class="col-sm-10">Opinie o miseczka bambusowa myszka dla dzieci</h3>
+          <div class="reviews-button"><a class="">+</a></div>
+        </div>
+        <div class="reviews-dropdown">
+          <div>
+            <div class="start row"></div>
+            <p>Towar zgodny z opisem</p>
+            <div class="row">
+              <p>22.01.2020 Wera, Szczecin, Polska</p>
+              <div>
+                <h4>Czy ta opinia była pomocna?</h4>
+                <div><img/><a>Tak(3)</a></div>
+                <div><img/><a>Nie(0)</a></div>
+              </div>
             </div>
           </div>
         </div>
