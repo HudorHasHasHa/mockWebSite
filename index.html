@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fontello/css/fontello.css">
   <title>Taskinio</title>
@@ -12,31 +12,34 @@
 </head>
 <body>
   <section class="top-bar row mobile-top-bar">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-3">
       <img class="col-sm-12" src="/images/logo.svg"/>
     </div>
-    <div class="col-sm-6 row top-bar-icons-wrapper">
+    <div class="col-sm-6 col-md-9 row top-bar-icons-wrapper">
         <div class="top-bar-icons"><a><img src="/images/fontello/search.svg"/></a></div>
         <div class="top-bar-icons"><a><img src="/images/fontello/basket.svg"/></a></div>
         <div class="top-bar-hamburger"><a><i class="demo-icon icon-menu"></i></a></div>
     </div>
     <div class="desktop-top-bar row  col-md-8">
-      <div class="search row"><input type="text" name="search"/><img src="/images/fontello/search.svg"/></div>
-      <div><a>Zaloguj się</a></div>
-      <div><a>Lista zakupowa</a></div>
-      <div><output type="number"></output></div>
+      <div class="search row"><input type="text" name="search" placeholder="Wpisz czego szukasz"/><img src="/images/fontello/search.svg"/></div>
+      <a >Zaloguj się</a>
+      <a>Lista zakupowa</a>
+      <div class="cart-button">
+        <img src="/images/fontello/basket.svg"/>
+        <span class="total-price">348.00 zł</span>
+      </div>
     </div>
   </section>
   <nav class="desktop-nav">
     <div class="row">
       <div class="desktop-nav-list col-md-12 row">
-          <a href="#">DOM</a>
-          <a href="#">DZIECKO</a>
-          <a href="#">ELEKTRONIKA</a>
-          <a href="#">KUCHNIA</a>
-          <a href="#">PREZENT</a>
-          <a href="#">NARZĘDZIA I BHP</a>
-          <a href="#">WYPRZEDAŻ</a>
+          <a >DOM</a>
+          <a >DZIECKO</a>
+          <a >ELEKTRONIKA</a>
+          <a >KUCHNIA</a>
+          <a >PREZENT</a>
+          <a >NARZĘDZIA I BHP</a>
+          <a >WYPRZEDAŻ</a>
       </div>
     </div>
   </nav>
@@ -47,7 +50,7 @@
       <div class="row nav-links">
         <p>Jesteś tutaj: &nbsp;</p>
         <a><u>Czujniki ruchu alarmowe</u></a>
-        <i></i>
+        <i class="demo-icon icon-right-open"></i>
         <p>Wynik</p>
       </div>
     </div>
@@ -69,7 +72,7 @@
       </div>
     </div>
   </nav>
-  <div class="container-fluid">
+  <div class="container-fluid mobile-container-fluid ">
     <section class="row product"> 
       <div class="col-sm-12 product-left-wrapper">
         <div class="gallery col-md-2">
@@ -206,6 +209,8 @@
         </div>
       </div>
     </section>
+  </div>
+  <div class="container-fluid-2 mobile-container-fluid ">
     <section class="package-section">
       <div class="package-header">
         <h2>W zestawie kupisz taniej</h2>
@@ -312,6 +317,53 @@
         </div>
       </div>
     </section>
+  </div>
+  <div class="container-fluid mobile-container-fluid-2 ">
+    <section class="bestsellers-section">
+      <div class="section-header">
+        <h2>Zobacz Podobne</h2>
+      </div>
+      <div class="bestsellers-content col-md-12 row">
+        <div class="row col-md-6">
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-a">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-b">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="row col-md-6">
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-c">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+          <div class="col-sm-5 bestseller-item">
+            <div class="bestseller-image-a">
+            </div>
+            <div class="bestseller-description">
+              <p>Bambusowe Naczynia dla Dzieci Ambition Junior Mimi</p>
+              <p><b>129,00 zł</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid-2 mobile-container-fluid ">
     <section class="frequently-asked-questions">
       <div class="frequently-asked-toggle">
         <div class="questions-section-header">
@@ -448,6 +500,8 @@
         </div>
       </div>
     </section>
+  </div>
+  <div class="container-fluid mobile-container-fluid-2">
     <section class="bestsellers-section">
       <div class="section-header">
         <h2>Bestsellery</h2>
@@ -491,23 +545,41 @@
         </div>
       </div>
     </section>
+  </div>
     <footer>
       <div class="col-md-12 desktop-footer">
         <div class="col-md-3">
           <h3>Moje zamówienie</h3>
           <ul>
-            <li>Status zamówienia</li>
-            <li>Śledzenie przesyłki</li>
-            <li>Chcę zareklamować towar</li>
-            <li>Chcę zwrócić towar</li>
-            <li>Chcę wymienić towar</li>
+            <li><a>Status zamówienia</a></li>
+            <li><a>Śledzenie przesyłki</a></li>
+            <li><a>Chcę zareklamować</a></li>
+            <li><a>Chcę zwrócić towar</a></li>
+            <li><a>Chcę wymienić towar</a></li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3>Moje Konto</h3>
+          <ul>
+            <li><a>Zarejestruj się</a></li>
+            <li><a>Moje zamówienie</a></li>
+            <li><a>Koszyk</a></li>
+            <li><a>Ulubione</a></li>
+            <li><a>Historia transakcji</a></li>
+            <li><a> Moje rabaty</a></li>
+            <li><a>Newsletter</a></li>
+          </ul>
         </div>
         <div class="col-md-3">
           <h3>Regulaminy</h3>
+          <ul>
+            <li>Informacje o sklepie</li>
+            <li>Wysyłka</li>
+            <li>Sposoby płatności</li>
+            <li>Regulamin</li>
+            <li>Polityka prywatności</li>
+            <li>Odstąpienie od umowy</li>
+          </ul>
         </div>
         <div class="col-md-3">
           <h3>Informacje</h3>

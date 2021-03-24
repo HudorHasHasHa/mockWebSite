@@ -16,10 +16,18 @@ body{
   padding-right: 15px;
 }
 
-.container-fluid {
+
+.mobile-container-fluid {
   width: 100%;
   padding: 0 15px;
 }
+
+.mobile-container-fluid-2 {
+  width: 100%;
+  padding: 0 15px;
+  background-color: $color-before;
+}
+
 
 .row {
   display: flex;
@@ -51,6 +59,9 @@ ul{
 .top-bar{
   .desktop-top-bar{
     display: none;
+    a:hover{
+      border-bottom: 1px solid orange;
+    }
   }
   .row{
     justify-content: flex-end;
@@ -252,6 +263,7 @@ input:focus {
 }
 
 .add-to-cart{
+  align-items: center;
   justify-content: space-between;
   padding: 15px 0;
   .quantity{
@@ -269,10 +281,17 @@ input:focus {
 
   .add-to-cart-button{
     text-align: center;
-    padding: 20px 22px;
+    padding: 15px 22px;
     border-radius: 44px;
     background-color: $buttons-background;
     color: white;
+    border: 1px solid transparent;
+
+    &:hover{
+      border: 1px solid $buttons-background;
+      background-color: white;
+      color: $buttons-background;
+    }
   } 
 }
 
@@ -352,12 +371,12 @@ input:focus {
 }
 
 .availability-count{
+  align-items: center;
   margin: 5px 0;
 }
 
 .green-dot{
-  top: 40%;
-  transform: translate(65%, 79%);
+  transform: translateX(65%);
   margin-right: 5px;
   height: 10px;
   width: 10px;
@@ -389,6 +408,14 @@ input:focus {
     border-radius: 44px;
     background-color: #346D99;
     color: white;
+      
+    border: 1px solid transparent;
+
+    &:hover{
+      background-color: white;
+      color: $buttons-background;
+      border: 1px solid $buttons-background;
+    }
   } 
 }
 
@@ -458,6 +485,11 @@ input:focus {
     margin-top: 15px;
     margin: auto;
     width: 60%;
+
+      &:hover{
+        background-color: $buttons-background;
+        color: white;
+      }
   }
 }
 
@@ -591,7 +623,7 @@ input:focus {
     transform: translate(0, 50%);
     animation: goDown 300ms ease-in-out forwards;
     overflow: hidden;
-    > * {
+    > * > *{
       border-bottom: 1px solid $color-before;
     }
 
@@ -611,6 +643,11 @@ input:focus {
       margin-top: 15px;
       margin: auto;
       width: 60%;
+      
+      &:hover{
+        background-color: $buttons-background;
+        color: #FFF;
+      }
     }
 
     .ask-question-inner-wrapper{
@@ -709,6 +746,11 @@ input:focus {
         font-size: 0.8em;
         margin: auto;
         margin: 20px 0;
+
+        &:hover{
+          background-color: $buttons-background;
+          color: #FFF;
+        }
       }
 
       .ratings{
@@ -818,6 +860,7 @@ input:focus {
 footer{
   background-color: $buttons-background;
   padding-top: 20px;
+  font-size: 0.8em;
 
   ul{ 
     list-style: none;
@@ -870,25 +913,18 @@ footer{
 @media(min-width: 768px) {
   @include grid('md');
 
+  // .container-fluid, .desktop-nav-list, .top-bar, .frequently-asked-questions .frequently-asked-toggle{
+  //   padding: 0 40px;
+  // }
+
+  // .navigation{
+  //   padding: 0 40px;
+  //   margin: 0;
+  // }
+
   .top-bar{
     .top-bar-icons-wrapper{
-      display: none;
-    }
-
-    .desktop-top-bar{
-      display: flex;
-
-      .search{
-        background-color: $color-before;
-        border-radius: 24px;
-        height: 70%;
-        justify-content: space-around;
-
-        input {
-          background-color: $color-before;
-          border: none;
-        }
-      }
+      justify-content: flex-end;
     }
     
   }
@@ -896,6 +932,7 @@ footer{
   .desktop-footer{
     display: flex;
     flex-wrap: wrap;
+
   }
 
   .desktop-nav{
@@ -911,17 +948,25 @@ footer{
         text-decoration: none;
         padding: 22px 4px;
         margin: 10px 0;
+        border-bottom: 1px solid transparent;
       }
       > *:hover{
-        outline: 1px solid black;
+        border-bottom: 1px solid orange;
       }
     }
   }
 
+  .container-fluid-2{
+    width: 100%;
+    padding: 0 20px;
+    background-color: #FFF;
+  }
+
   .container-fluid{
     width:100%;
-    padding: 0 15px;
+    padding: 0 20px;
     background-color: $color-before;
+    padding-bottom: 18px;
 
     > * {
       background-color: white;
@@ -941,7 +986,7 @@ footer{
     .bestsellers-section{
       background-color: $color-before;
       padding: 60px 0;
-      padding-top: 0;
+      padding-top: 30px;
     }
   }
 
@@ -1109,6 +1154,7 @@ footer{
     .specifications-content{
       font-size: 1em;
       margin-top: 25px;
+      padding-bottom: 25px;
       > *{
         font-size: .8em;
         justify-content: center;
@@ -1157,7 +1203,7 @@ footer{
   }
 
   .frequently-asked-questions{
-    margin: 40px 0;
+    margin-top: 40px;
     padding: 20px 0;
 
     .mobile-frequently-button{
@@ -1173,7 +1219,9 @@ footer{
       display: block;
       text-align: center;
       position: relative;
-      padding: 15px 0;
+      margin: 30px 0;
+      border-bottom: 1px solid #F6F6F6;
+
         &:after{
           content: "";
           left: 50%;
@@ -1212,13 +1260,20 @@ footer{
     }
 
     .reviews-toggle{
+      padding-top: 80px;
 
       .reviews-section-header{
         font-size: 1em;
         display: block;
         text-align: center;
         position: relative;
-        padding: 15px 0;
+        padding-top: 60px 0;
+        border-bottom: 1px solid $color-before;
+
+        h3{
+          margin-top: 0;
+        }
+
           &:after{
             content: "";
             left: 50%;
@@ -1274,6 +1329,41 @@ footer{
 @media(min-width: 992px){
   @include grid('lg');
 
+  .top-bar{
+    justify-content: space-between;
+    .top-bar-icons-wrapper{
+      display: none;
+    }
+
+    .desktop-top-bar{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .search{
+        background-color: #F6F6F6;
+        border-radius: 24px;
+        height: 70%;
+        justify-content: space-around;
+        padding: 0px 2%;
+
+        input {
+          background-color: $color-before;
+          border: none;
+        }
+      }
+
+      .cart-button{
+        color: #FFF;
+        padding: 12px 35px;
+        background-color: $buttons-background;
+        border-radius: 50px;
+        overflow: hidden;
+      }
+    }
+    
+  }
+
   .product{
     font-size: 1em;
   }
@@ -1302,8 +1392,24 @@ footer{
 @media(min-width: 1200px){
   @include grid('xl');
 
+  footer{
+    font-size: 1.1em;
+  }
+
   .container-fluid, .desktop-nav-list, .top-bar{
     padding: 0 160px;
+    padding-bottom: 25px;
+  }
+
+  .navigation{
+    padding: 0 160px;
+    margin: 0;
+  }
+
+  .container-fluid-2{
+    width: 100%;
+    padding: 0 160px;
+    background-color: #FFF;
   }
 
   
@@ -1311,12 +1417,6 @@ footer{
     height: 60px;
     width: 60px;
   }
-
-  .navigation{
-    padding: 0 160px;
-    margin: 0;
-  }
-  
 
   .product{
     font-size: 1em;

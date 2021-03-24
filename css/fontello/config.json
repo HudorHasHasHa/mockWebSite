@@ -35,6 +35,12 @@
       "css": "thumbs-up-alt",
       "code": 61796,
       "src": "fontawesome"
+    },
+    {
+      "uid": "37910a1398001a5ccb541cb2a253a2c7",
+      "css": "right-open",
+      "code": 61446,
+      "src": "mfglabs"
     }
   ]
 }
