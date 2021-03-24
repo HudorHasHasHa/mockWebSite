@@ -1077,6 +1077,59 @@ footer .logos .row {
         flex: 0 0 100%;
     max-width: 100%;
   }
+  .gallery {
+    margin: auto;
+  }
+  .gallery .gallery1 {
+    background: url("https://i.ibb.co/ScNCRwR/thumb-1.png") no-repeat;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    content: "";
+    padding-bottom: 100%;
+    margin: 0;
+    background-position: center;
+  }
+  .gallery .gallery2 {
+    background: url("https://i.ibb.co/8cvGcp0/version-1.png") no-repeat;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    content: "";
+    padding-bottom: 100%;
+    margin: 0;
+    background-position: center;
+  }
+  .gallery .gallery3 {
+    background: url("https://i.ibb.co/vv6T1Cd/thumb-4.png") no-repeat;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    content: "";
+    padding-bottom: 100%;
+    margin: 0;
+    background-position: center;
+  }
+  .gallery .gallery4 {
+    background: url("https://i.ibb.co/ScNCRwR/thumb-1.png") no-repeat;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    content: "";
+    padding-bottom: 100%;
+    margin: 0;
+    background-position: center;
+  }
+  .gallery .gallery5 {
+    background: url("https://i.ibb.co/8cvGcp0/version-1.png") no-repeat;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    content: "";
+    padding-bottom: 100%;
+    margin: 0;
+    background-position: center;
+  }
   .top-bar .top-bar-icons-wrapper {
     -ms-flex-pack: end;
         justify-content: flex-end;
@@ -1147,10 +1200,10 @@ footer .logos .row {
     background-color: white;
     width: 67%;
   }
-  .product .product-left {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .product .product-left:before {
+    height: 50px;
+    width: 50px;
+    background-color: orange;
   }
   .product .product-right {
     margin: 0 10px;
@@ -1623,11 +1676,6 @@ footer .logos .row {
   }
   .items-available {
     font-size: 1.2em;
-  }
-  .product-left {
-    padding-bottom: 70% !important;
-    background-size: 70% !important;
-    background-position: top !important;
   }
   .package-section .package-header:after {
     content: "";

@@ -922,6 +922,60 @@ footer{
   //   margin: 0;
   // }
 
+  .gallery{
+    margin: auto;
+    .gallery1{
+      background: url('https://i.ibb.co/ScNCRwR/thumb-1.png') no-repeat;
+      display: block;
+      position: relative;
+      background-size: 100%;
+      content: "";
+      padding-bottom: 100%;
+      margin:0;
+      background-position: center;
+    }
+    .gallery2{
+      background: url('https://i.ibb.co/8cvGcp0/version-1.png') no-repeat;
+      display: block;
+      position: relative;
+      background-size: 100%;
+      content: "";
+      padding-bottom: 100%;
+      margin:0;
+      background-position: center;
+    }
+    .gallery3{
+      background: url('https://i.ibb.co/vv6T1Cd/thumb-4.png') no-repeat;
+      display: block;
+      position: relative;
+      background-size: 100%;
+      content: "";
+      padding-bottom: 100%;
+      margin:0;
+      background-position: center;
+    }
+    .gallery4{
+      background: url('https://i.ibb.co/ScNCRwR/thumb-1.png') no-repeat;
+      display: block;
+      position: relative;
+      background-size: 100%;
+      content: "";
+      padding-bottom: 100%;
+      margin:0;
+      background-position: center;
+    }
+    .gallery5{
+      background: url('https://i.ibb.co/8cvGcp0/version-1.png') no-repeat;
+      display: block;
+      position: relative;
+      background-size: 100%;
+      content: "";
+      padding-bottom: 100%;
+      margin:0;
+      background-position: center;
+    }
+  }
+
   .top-bar{
     .top-bar-icons-wrapper{
       justify-content: flex-end;
@@ -1002,11 +1056,13 @@ footer{
       background-color: white;
       width: 67%;
     }
-    .product-left{
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
 
+    .product-left{
+      &:before{
+        height: 50px;
+        width: 50px;
+        background-color:orange;
+      }
     }
 
     .product-right{
@@ -1426,11 +1482,6 @@ footer{
     font-size: 1.2em;
   }
 
-  .product-left{
-    padding-bottom: 70% !important;
-    background-size: 70% !important;
-    background-position: top !important; 
-  }
 
   .package-section{
     .package-header{
