@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fontello/css/fontello.css">
   <title>Taskinio</title>
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
@@ -83,7 +82,7 @@
       <div class="product-right col-sm-12 col-md-4 col-xl-4">
         <div class="product-header">
           <div class="row desktop-product-header">
-            <img class="col-md-5" src="./images/Image 1.svg">
+            <div class="col-md-5 image"><img class="col-md-12" src="./images/Image 1.svg"></div>
             <h2 class="col-md-7">
               Bambusowe Naczynia dla Dzieci Ambition Junior Alex
             </h2>
@@ -124,9 +123,9 @@
           <div class="col-sm-2 quantity">
             <input value="1" min="1" max="9" type="number">
           </div>
-          <div class="add-to-cart-button col-sm-9">
-            <a>DODAJ DO KOSZYKA</a>
-          </div>
+          <a class="add-to-cart-button col-sm-9">
+            DODAJ DO KOSZYKA
+          </a>
         </div>
         <div class="add-to-wish-list">
           <a>Do listy zakupowej</a>
@@ -162,9 +161,9 @@
             <div class="col-sm-2 quantity-2 col-md-2">
               <input value="1" min="1" max="9" type="number">
             </div>
-            <div class="to-cart-button col-sm-8 col-md-8">
-              <a>DO KOSZYKA</a>
-            </div>
+            <a class="to-cart-button col-sm-8 col-md-8">
+              DO KOSZYKA
+            </a>
           </div>
         </div>
       </div>
@@ -181,9 +180,9 @@
             <div class="col-sm-2 quantity-2">
               <input value="1" min="1" max="9" type="number">
             </div>
-            <div class="to-cart-button col-sm-8">
-              <a>DO KOSZYKA</a>
-            </div>
+            <a class="to-cart-button col-sm-8">
+              DO KOSZYKA
+            </a>
           </div>
         </div>
       </div>
@@ -200,9 +199,9 @@
             <div class="col-sm-2 quantity-2">
               <input value="1" min="1" max="9" type="number">
             </div>
-            <div class="to-cart-button col-sm-8">
-              <a>DO KOSZYKA</a>
-            </div>
+            <a class="to-cart-button col-sm-8">
+              DO KOSZYKA
+            </a>
           </div>
         </div>
       </div>
@@ -224,9 +223,9 @@
               <h3>149,00 / zestaw</h3>
             </div>
           </div>
-          <div class="row col-sm-6 check-offer-button col-md-4"> 
-            <a class=""><b>ZOBACZ OFERTĘ</b></a>
-          </div>
+          <a class="row col-sm-6 check-offer-button col-md-4"> 
+            <b>ZOBACZ OFERTĘ</b>
+          </a>
         </div>
       </div>
     </section>
@@ -315,11 +314,12 @@
     </section>
     <section class="frequently-asked-questions">
       <div class="frequently-asked-toggle">
-        <div class="questions-section-header row">
-          <h3 class="col-sm-10">Nasi klienci najczęściej pytali o:</h3>
+        <div class="questions-section-header">
+          <h3 class="col-sm-10 col-md-12">Nasi klienci najczęściej pytali o:</h3>
           <div class="mobile-frequently-button"><a class="">+</a></div>
         </div>
-        <div class="frequently-dropdown">
+        <div class="row frequently-dropdown ">
+          <div class="col-md-6">
           <div>
             <h3>Czy te miseczki mają atesty bezpieczeństwa?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet libero nesciunt officia praesentium, animi maxime magni odit voluptatum perferendis placeat?</p>
@@ -330,33 +330,119 @@
           <div>
             <h3>Czy miseczki nie uczulą 6 miesięcznego dziecka?</h3>
           </div>
-          <div class="ask-question">
+        </div>
+        <div class="ask-question col-md-6 col-sm-12">
+          <div class="ask-question-inner-wrapper col-sm-12 col-md-10">
             <h3>Masz pytanie na temat tego produktu?</h3>
             <p>Nasi specjaliści chętnie udzielą Ci potrzebnych informacji.</p>
-            <div class="row col-sm-6 ask-question-button col-md-4"> 
-              <a class=""><b>ZADAJ PYTANIE</b></a>
-            </div>
+            <a class="row col-sm-6 ask-question-button col-md-4"> 
+              <b>ZADAJ PYTANIE</b>
+            </a>
           </div>
+        </div>
         </div>
       </div>
     </section>
     <section class="reviews-section"> 
       <div class="reviews-toggle">
         <div class="reviews-section-header row">
-          <h3 class="col-sm-10">Opinie o miseczka bambusowa myszka dla dzieci</h3>
+          <h3 class="col-sm-10 col-md-12">Opinie o miseczka bambusowa myszka dla dzieci</h3>
           <div class="reviews-button"><a class="">+</a></div>
         </div>
-        <div class="reviews-dropdown">
-          <div>
-            <div class="start row"></div>
-            <p>Towar zgodny z opisem</p>
-            <div class="row">
-              <p>22.01.2020 Wera, Szczecin, Polska</p>
-              <div>
-                <h4>Czy ta opinia była pomocna?</h4>
-                <div><img/><a>Tak(3)</a></div>
-                <div><img/><a>Nie(0)</a></div>
+        <div class="reviews-dropdown col-md-12">
+          <div class="reviews col-md-8">
+            <div class="review">
+              <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>5/5</p>
               </div>
+              <div class="review-wrapper">
+                <div class="start row"></div>
+                <p>Towar zgodny z opisem</p>
+                <div class="row review-info">
+                  <div class="col-md-5 review-info-personal">
+                    <p>22.01.2020 Wera, Szczecin, Polska</p>
+                  </div>
+                  <div class="row review-feedback col-sm-12 col-md-7">
+                    <h4>Czy ta opinia była pomocna?</h4>
+                    <a class="thumbs-up"><i class="demo-icon icon-thumbs-up-alt"></i>Tak(3)</a>
+                    <a><i class="demo-icon icon-thumbs-down"></i>Nie(0)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>5/5</p>
+              </div>
+              <div class="review-wrapper">
+                <div class="start row"></div>
+                <p>Towar zgodny z opisem</p>
+                <div class="row review-info">
+                  <div class="col-md-5 review-info-personal">
+                    <p>22.01.2020 Wera, Szczecin, Polska</p>
+                  </div>
+                  <div class="row review-feedback col-sm-12 col-md-7">
+                    <h4>Czy ta opinia była pomocna?</h4>
+                    <a class="thumbs-up"><i class="demo-icon icon-thumbs-up-alt"></i>Tak(3)</a>
+                    <a><i class="demo-icon icon-thumbs-down"></i>Nie(0)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>5/5</p>
+              </div>
+              <div class="review-wrapper">
+                <div class="start row"></div>
+                <p>Towar zgodny z opisem</p>
+                <div class="row review-info">
+                  <div class="col-md-5 review-info-personal">
+                    <p>22.01.2020 Wera, Szczecin, Polska</p>
+                  </div>
+                  <div class="row review-feedback col-sm-12 col-md-7">
+                    <h4>Czy ta opinia była pomocna?</h4>
+                    <a class="thumbs-up"><i class="demo-icon icon-thumbs-up-alt"></i>Tak(3)</a>
+                    <a><i class="demo-icon icon-thumbs-down"></i>Nie(0)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-your-opinion col-md-4">
+            <div class="your-opinion-wrapper">
+              <div class="your-opinion-inner-wrapper">
+                <div class="row rating">
+                <i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i><i class="demo-icon icon-star"></i>
+                <p>4.5</p>
+              </div>
+              <div>
+                <p>Liczba wystawionych opinii: 3</p>
+                <a class="row rate-button">DODAJ SWOJĄ OPINIĘ</a>
+              </div>
+              <div class="ratings">
+                <div class="row">
+                  <p>5</p><i class="demo-icon icon-star"></i><progress max="100" value="72"></progress><p>(21)</p>
+                </div>
+                <div class="row">
+                  <p>4</p><i class="demo-icon icon-star"></i><progress max="100" value="30"></progress><p>(5)</p>
+                </div>
+                <div class="row">
+                  <p>3</p><i class="demo-icon icon-star"></i><progress max="100" value="0"></progress><p>(0)</p>
+                </div>
+                <div class="row">
+                  <p>2</p><i class="demo-icon icon-star"></i><progress max="100" value="0"></progress><p>(0)</p>
+                </div>
+                <div class="row">
+                  <p>1</p><i class="demo-icon icon-star"></i><progress max="100" value="4"></progress><p>(1)</p>
+                </div>
+              </div>
+
+              </div>
+              
             </div>
           </div>
         </div>

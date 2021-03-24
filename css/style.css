@@ -398,8 +398,8 @@ input:focus {
 }
 
 .green-dot {
-  top: 31%;
-  transform: translate(58%, 53%);
+  top: 40%;
+  transform: translate(65%, 79%);
   margin-right: 5px;
   height: 10px;
   width: 10px;
@@ -585,6 +585,10 @@ input:focus {
 }
 
 .frequently-asked-questions .questions-section-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 0.8em;
   padding: 0 10px;
   -ms-flex-pack: justify;
@@ -658,6 +662,10 @@ input:focus {
   width: 60%;
 }
 
+.frequently-asked-questions .frequently-dropdown .ask-question-inner-wrapper {
+  text-align: center;
+}
+
 .reviews-section .reviews-section-header {
   -ms-flex-pack: justify;
       justify-content: space-between;
@@ -692,6 +700,85 @@ input:focus {
   transition: all 0.25s ease-in-out;
   animation: goDown 300ms ease-in-out forwards;
   overflow: hidden;
+}
+
+.reviews-section .reviews-dropdown .review-wrapper {
+  padding-left: 15px;
+}
+
+.reviews-section .reviews-dropdown .rating .icon-star {
+  width: 30px;
+  color: gold;
+}
+
+.reviews-section .reviews-dropdown .rating p {
+  margin: 0;
+  margin-left: 25px;
+}
+
+.reviews-section .reviews-dropdown .review {
+  border-bottom: 3px solid #F6F6F6;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.reviews-section .reviews-dropdown .review-info {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.reviews-section .reviews-dropdown .review-info h4 {
+  margin: 0;
+}
+
+.reviews-section .reviews-dropdown .review-info .review-feedback {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-size: 0.6em;
+}
+
+.reviews-section .reviews-dropdown .review-info .review-feedback .thumbs-up {
+  fill: blue;
+  color: blue;
+}
+
+.reviews-section .reviews-dropdown .review-info .review-feedback h4 {
+  font-weight: normal;
+}
+
+.reviews-section .reviews-dropdown .add-your-opinion {
+  padding: 30px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.reviews-section .reviews-dropdown .add-your-opinion .rate-button {
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 8px 12px;
+  border-radius: 44px;
+  color: #346D99;
+  background-color: white;
+  border: 3px solid #346D99;
+  font-size: 0.8em;
+  margin: auto;
+  margin: 20px 0;
+}
+
+.reviews-section .reviews-dropdown .add-your-opinion .ratings {
+  margin-top: 35px;
+}
+
+.reviews-section .reviews-dropdown .add-your-opinion .ratings p {
+  margin: 0;
+}
+
+.reviews-section .active .reviews-section-header {
+  border-bottom: 1px solid #F6F6F6;
 }
 
 .reviews-section .active .reviews-dropdown {
@@ -1007,6 +1094,8 @@ footer .logos .row {
   }
   .container-fluid .bestsellers-section {
     background-color: #F6F6F6;
+    padding: 60px 0;
+    padding-top: 0;
   }
   .product {
     font-size: 0.6em;
@@ -1036,6 +1125,19 @@ footer .logos .row {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
   }
+  .product .product-right .desktop-product-header h2 {
+    margin: 12px 0;
+  }
+  .product .product-right .desktop-product-header img {
+    margin: 12px 0;
+  }
+  .product .product-right .desktop-product-header image {
+    width: 100%;
+  }
+  .product .product-right .desktop-product-header image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .items-image-a {
     background-position: center;
   }
@@ -1047,7 +1149,7 @@ footer .logos .row {
   }
   .items-available {
     margin-bottom: 35px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -1160,7 +1262,6 @@ footer .logos .row {
     font-size: 0.6em;
     background-color: #F6F6F6;
     padding: 8px 0;
-    opacity: 0.7;
   }
   .navigation .mobile-navigation {
     display: none;
@@ -1178,6 +1279,106 @@ footer .logos .row {
   .navigation .desktop-navigation .desktop-navigation-link {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .frequently-asked-questions {
+    margin: 40px 0;
+    padding: 20px 0;
+  }
+  .frequently-asked-questions .mobile-frequently-button {
+    display: none;
+  }
+  .frequently-asked-questions .frequently-dropdown {
+    font-size: 0.7em;
+    max-height: 1000px;
+  }
+  .frequently-asked-questions .questions-section-header {
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 15px 0;
+  }
+  .frequently-asked-questions .questions-section-header:after {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 1px;
+    background-color: orange;
+    position: absolute;
+  }
+  .frequently-asked-questions .ask-question {
+    padding: 15px 0;
+  }
+  .frequently-asked-questions .ask-question-inner-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .reviews-section .desktop-reviews-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .reviews-section .reviews {
+    font-size: 0.9em;
+  }
+  .reviews-section .ratings {
+    font-size: 0.8em;
+  }
+  .reviews-section .reviews-toggle .reviews-section-header {
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 15px 0;
+  }
+  .reviews-section .reviews-toggle .reviews-section-header:after {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 1px;
+    background-color: orange;
+    position: absolute;
+  }
+  .reviews-section .reviews-toggle .review-info {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .reviews-section .reviews-toggle .review-info .review-info-personal p {
+    font-size: 0.7em;
+    margin: 0;
+  }
+  .reviews-section .reviews-toggle .review-info .review-feedback {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    font-size: 0.7em;
+  }
+  .reviews-section .reviews-toggle .reviews-dropdown {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    max-height: 1000px;
+  }
+  .reviews-section .reviews-toggle .reviews-button {
+    display: none;
+  }
+  .reviews-section .reviews-toggle .add-your-opinion {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .reviews-section .reviews-toggle .add-your-opinion .your-opinion-wrapper {
+    text-align: center;
+  }
+  .reviews-section .reviews-toggle .add-your-opinion .your-opinion-wrapper .your-opinion-inner-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -1255,10 +1456,6 @@ footer .logos .row {
     font-size: 1em;
     margin-right: 30px;
   }
-  .container-fluid footer .logos .row img {
-    height: 68px;
-    width: 68px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -1322,6 +1519,17 @@ footer .logos .row {
         flex: 0 0 100%;
     max-width: 100%;
   }
+  .container-fluid, .desktop-nav-list, .top-bar {
+    padding: 0 160px;
+  }
+  .container-fluid footer .logos .row img {
+    height: 60px;
+    width: 60px;
+  }
+  .navigation {
+    padding: 0 160px;
+    margin: 0;
+  }
   .product {
     font-size: 1em;
   }
@@ -1333,6 +1541,14 @@ footer .logos .row {
     background-size: 70% !important;
     background-position: top !important;
   }
+  .package-section .package-header:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    border-bottom: 1px solid orange;
+  }
   .package-section .package-description .package-description-inner p {
     font-size: 1.5em;
   }
@@ -1341,6 +1557,15 @@ footer .logos .row {
   }
   .description-section .description-header {
     font-size: 1.3em;
+  }
+  .description-section .description-header:after {
+    content: "";
+    position: absolute;
+    left: calc(145px + (100vw * 1/12));
+    transform: translateX(0px);
+    height: 1px;
+    width: 15%;
+    background-color: orange;
   }
   .description-section .description-content {
     font-size: 1.1em;
@@ -1363,8 +1588,9 @@ footer .logos .row {
   }
   .to-cart .to-cart-button {
     text-align: center;
-    font-size: 1em;
-    padding: 13px 0px;
+    vertical-align: middle;
+    font-size: 0.8em;
+    padding: 10% 0px;
     border-radius: 44px;
     background-color: #346D99;
     color: white;
@@ -1381,6 +1607,21 @@ footer .logos .row {
     border-radius: 50%;
     position: relative;
     color: white;
+  }
+  .frequently-asked-questions .frequently-asked-toggle {
+    font-size: 1.4em;
+  }
+  .reviews-section {
+    font-size: 1.4em;
+  }
+  .specifications-section .section-header:after {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 1px;
+    background-color: orange;
+    position: absolute;
   }
 }
 /*# sourceMappingURL=style.css.map */
