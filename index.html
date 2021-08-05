@@ -9,37 +9,58 @@
   <title>Taskinio</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Noto+Sans&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="js/script.js"></script>
 </head>
 <body>
   <section class="top-bar row mobile-top-bar">
-    <div class="col-sm-6 col-md-3">
+    <div class="col-sm-6 col-md-3 top-bar-logo">
       <img class="col-sm-12" src="./images/logo.svg"/>
     </div>
     <div class="col-sm-6 col-md-9 row top-bar-icons-wrapper">
-        <div class="top-bar-icons"><a><img src="./images/fontello/search.svg"/></a></div>
-        <div class="top-bar-icons"><a><img src="./images/fontello/basket.svg"/></a></div>
-        <div class="top-bar-hamburger"><a><i class="demo-icon icon-menu"></i></a></div>
+        <div class="top-bar-icons"><a href="#"><img src="./images/fontello/search.svg"/></a></div>
+        <div class="top-bar-icons"><a href="#"><img src="./images/fontello/basket.svg"/></a></div>
+        <div class="top-bar-hamburger"><a href="#"><i class="demo-icon icon-menu"></i></a></div>
     </div>
     <div class="desktop-top-bar row  col-md-8">
-      <div class="search row"><input type="text" name="search" placeholder="Wpisz czego szukasz"/><img src="./images/fontello/search.svg"/></div>
-      <a >Zaloguj się</a>
-      <a>Lista zakupowa</a>
-      <div class="cart-button">
-        <img src="./images/fontello/basket.svg"/>
-        <span class="total-price">348.00 zł</span>
+      <div class="search row">
+        <input class="col-sm-9" type="text" name="search" placeholder="Wyszukaj..."/>
+        <a class="search-icon col-sm-2"><img src="./images/fontello/search.svg"/></a>
+      </div>
+      <a href="#">Zaloguj się</a>
+      <a href="#">Lista zakupowa</a>
+
+      <div class="menu-basket">
+        <a class="cart-button" href="#">
+          <img src="./images/fontello/basket.svg"/>
+          <span id="total-price">0.00 zł</span>
+        </a>
+        <div class="cart-dropdown">
+          <div class="cart-dropdown-wrapper">
+            <ul id="cart-dropdown-items" class="cart-dropdown-items">
+            </ul>
+          </div>
+          <div class="cart-dropdown-header">
+            <div class="shopping-cart-total">
+              <span>Do zapłaty:</span>
+              <span id="total-price">0.00 zł</span>
+            </div>
+          </div>
+          <a href="#" class="dropdown-button">Podsumowanie<i class="fa fa-chevron-right"></i></a>
+        </div>
       </div>
     </div>
   </section>
   <nav class="desktop-nav">
     <div class="row">
       <div class="desktop-nav-list col-md-12 row">
-          <a >DOM</a>
-          <a >DZIECKO</a>
-          <a >ELEKTRONIKA</a>
-          <a >KUCHNIA</a>
-          <a >PREZENT</a>
-          <a >NARZĘDZIA I BHP</a>
-          <a >WYPRZEDAŻ</a>
+          <a href="#">DOM</a>
+          <a href="#">DZIECKO</a>
+          <a href="#">ELEKTRONIKA</a>
+          <a href="#">KUCHNIA</a>
+          <a href="#">PREZENT</a>
+          <a href="#">NARZĘDZIA I BHP</a>
+          <a href="#">WYPRZEDAŻ</a>
       </div>
     </div>
   </nav>
@@ -49,26 +70,26 @@
       <div class="border"></div>
       <div class="row nav-links">
         <p>Jesteś tutaj: &nbsp;</p>
-        <a><u>Czujniki ruchu alarmowe</u></a>
+        <a href="#"><u>Czujniki ruchu alarmowe</u></a>
         <i class="demo-icon icon-right-open"></i>
         <p>Wynik</p>
       </div>
     </div>
     <div class="desktop-navigation row col-md-10">
       <div class="row desktop-navigation-link">
-        <div><a>Strona główna</a></div>
+        <div><a href="#">Strona główna</a></div>
         <div><a>/</a></div>
       </div>
       <div class="row desktop-navigation-link">
-        <div><a>Dziecko</a></div>
+        <div><a href="#">Dziecko</a></div>
         <div><a>/</a></div>
       </div>
       <div class="row desktop-navigation-link">
-        <div><a>Zastawa stołowa</a></div>
+        <div><a href="#">Zastawa stołowa</a></div>
         <div><a>/</a></div>
       </div>
       <div class="row desktop-navigation-link">
-        <div><a>Bambusowe naczynia dla dzieci</a></div>
+        <div><a href="#">Bambusowe naczynia dla dzieci</a></div>
       </div>
     </div>
   </nav>
@@ -76,13 +97,13 @@
     <section class="row product"> 
       <div class="row col-sm-12 col-md-8 product-left-wrapper">
         <div class="gallery col-md-2">
-            <div class="gallery1 col-md-12"></div>
-            <div class="gallery2 col-md-12"></div>
-            <div class="gallery3 col-md-12"></div>
-            <div class="gallery4 col-md-12"></div>
-            <div class="gallery5 col-md-12"></div>
+            <div class="gallery-1 col-md-12"></div>
+            <div class="gallery-2 col-md-12"></div>
+            <div class="gallery-3 col-md-12"></div>
+            <div class="gallery-4 col-md-12"></div>
+            <div class="gallery-5 col-md-12"></div>
         </div>
-        <div class="product-left col-sm-12 col-md-10"></div>
+        <div id="product-left" class="product-left col-sm-12 col-md-10"></div>
       </div>
       <div class="product-right col-sm-12 col-md-4 col-xl-4">
         <div class="product-header">
@@ -126,9 +147,9 @@
         </div>
         <div class="row add-to-cart"> 
           <div class="col-sm-2 quantity">
-            <input value="1" min="1" max="9" type="number">
+            <input id="quantity-item1" value="1" min="1" max="9" type="number">
           </div>
-          <a class="add-to-cart-button col-sm-9">
+          <a id="button-item1" href="#" class="add-to-cart-button col-sm-9">
             DODAJ DO KOSZYKA
           </a>
         </div>
@@ -154,57 +175,57 @@
     <section class="items-available row">
       <div class="row col-sm-12 col-md-12 items-available-header"><h3>Dostępne warianty</h3></div>
       <div class="row available-item col-sm-12 col-md-3 available-md-border">
-        <div class="item-image-a col-sm-4 col-md-4"></div>
+        <div id="item1-img" class="item-image col-sm-4 col-md-4"></div>
         <div class="item-description col-sm-8 col-md-8">
-          <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
+          <p id="item1-title"></p>
           <div class="row availability-count">
             <div class="green-dot"></div>
-            <p>Dostępne 3 szt.</p>
+            <p>Dostępne <p id="item1-quantity"></p> szt.</p>
           </div>
-          <p><b>29,0 zł / szt.</b></p>
+          <p><b id="item1-price"></b></p>
           <div class="row to-cart"> 
-            <div class="col-sm-2 quantity-2 col-md-2">
-              <input value="1" min="1" max="9" type="number">
+            <div class="col-sm-4 quantity-2">
+              <input id="quantity-item2"  value="1" min="1" max="9" type="number">
             </div>
-            <a class="to-cart-button col-sm-8 col-md-8">
+            <a id="button-item1" href="#" class="to-cart-button col-sm-8 col-md-8">
               DO KOSZYKA
             </a>
           </div>
         </div>
       </div>
       <div class="row available-item col-sm-12 col-md-3 available-md-border">
-        <div class="item-image-b col-sm-4"></div>
+        <div id="item2-img" class=" item-image col-sm-4"></div>
         <div class="item-description col-sm-8">
-          <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
+          <p id="item2-title"></p>
           <div class="row availability-count">
             <div class="green-dot"></div>
-            <p>Dostępne 3 szt.</p>
+            <p>Dostępne <p id="item2-quantity"></p> szt.</p>
           </div>
-          <p><b>29,0 zł / szt.</b></p>
+          <p><b id="item2-price"></b></p>
           <div class="row to-cart"> 
-            <div class="col-sm-2 quantity-2">
-              <input value="1" min="1" max="9" type="number">
+            <div class="col-sm-4 quantity-2">
+              <input id="quantity-item3"  value="1" min="1" max="9" type="number">
             </div>
-            <a class="to-cart-button col-sm-8">
+            <a id="button-item2" href="#" class="to-cart-button col-sm-8">
               DO KOSZYKA
             </a>
           </div>
         </div>
       </div>
       <div class="row available-item col-sm-12 col-md-3">
-        <div class="item-image-c col-sm-4"></div>
+        <div id="item3-img" class="item-image col-sm-4"></div>
         <div class="item-description col-sm-8">
-          <p>Bambusowe Naczynia dla Dzieci Ambition Junior Alex</p>
+          <p id="item3-title"></p>
           <div class="row availability-count">
             <div class="green-dot"></div>
-            <p>Dostępne 3 szt.</p>
+            <p>Dostępne <p id="item3-quantity"></p> szt.</p>
           </div>
-          <p><b>29,0 zł / szt.</b></p>
+          <p><b id="item3-price"></b></p>
           <div class="row to-cart"> 
-            <div class="col-sm-2 quantity-2">
-              <input value="1" min="1" max="9" type="number">
+            <div class="col-sm-4 quantity-2">
+              <input id="quantity-item4"  value="1" min="1" max="9" type="number">
             </div>
-            <a class="to-cart-button col-sm-8">
+            <a id="button-item3" href="#" class="to-cart-button col-sm-8">
               DO KOSZYKA
             </a>
           </div>
@@ -223,14 +244,14 @@
           <div><a class="plus-sign">+</a></div>
           <div class="package-item-2 col-sm-4 col-md-5"></div>
         </div>
-        <div class="col-md-6 col-sm-12 row">
-          <div class="package-description col-sm-12 col-md-7">
+        <div class="col-md-5 col-sm-12 row">
+          <div class="package-description col-sm-12 col-md-6">
             <div class="package-description-inner">
               <p>Cena produktów poza zestawem 199,00 zł</p>
               <h3>149,00 / zestaw</h3>
             </div>
           </div>
-          <a class="row col-sm-6 check-offer-button col-md-4"> 
+          <a href="#" class="row col-sm-6 check-offer-button col-md-5"> 
             <b>ZOBACZ OFERTĘ</b>
           </a>
         </div>
@@ -389,7 +410,7 @@
           <div class="ask-question-inner-wrapper col-sm-12 col-md-10">
             <h3>Masz pytanie na temat tego produktu?</h3>
             <p>Nasi specjaliści chętnie udzielą Ci potrzebnych informacji.</p>
-            <a class="row col-sm-6 ask-question-button col-md-4"> 
+            <a href="#" class="row col-sm-6 ask-question-button col-md-4"> 
               <b>ZADAJ PYTANIE</b>
             </a>
           </div>
@@ -475,7 +496,7 @@
               </div>
               <div>
                 <p>Liczba wystawionych opinii: 3</p>
-                <a class="row rate-button">DODAJ SWOJĄ OPINIĘ</a>
+                <a href="#" class="row rate-button">DODAJ SWOJĄ OPINIĘ</a>
               </div>
               <div class="ratings">
                 <div class="row">
@@ -553,42 +574,42 @@
         <div class="col-md-3">
           <h3>Moje zamówienie</h3>
           <ul>
-            <li><a>Status zamówienia</a></li>
-            <li><a>Śledzenie przesyłki</a></li>
-            <li><a>Chcę zareklamować</a></li>
-            <li><a>Chcę zwrócić towar</a></li>
-            <li><a>Chcę wymienić towar</a></li>
+            <li><a href="#">Status zamówienia</a></li>
+            <li><a href="#">Śledzenie przesyłki</a></li>
+            <li><a href="#">Chcę zareklamować</a></li>
+            <li><a href="#">Chcę zwrócić towar</a></li>
+            <li><a href="#">Chcę wymienić towar</a></li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3>Moje Konto</h3>
           <ul>
-            <li><a>Zarejestruj się</a></li>
-            <li><a>Moje zamówienie</a></li>
-            <li><a>Koszyk</a></li>
-            <li><a>Ulubione</a></li>
-            <li><a>Historia transakcji</a></li>
-            <li><a> Moje rabaty</a></li>
-            <li><a>Newsletter</a></li>
+            <li><a href="#">Zarejestruj się</a></li>
+            <li><a href="#">Moje zamówienie</a></li>
+            <li><a href="#">Koszyk</a></li>
+            <li><a href="#">Ulubione</a></li>
+            <li><a href="#">Historia transakcji</a></li>
+            <li><a href="#"> Moje rabaty</a></li>
+            <li><a href="#">Newsletter</a></li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3>Regulaminy</h3>
           <ul>
-            <li>Informacje o sklepie</li>
-            <li>Wysyłka</li>
-            <li>Sposoby płatności</li>
-            <li>Regulamin</li>
-            <li>Polityka prywatności</li>
-            <li>Odstąpienie od umowy</li>
+            <li><a href="#">Informacje o sklepie</a></li>
+            <li><a href="#">Wysyłka</a></li>
+            <li><a href="#">Sposoby płatności</a></li>
+            <li><a href="#">Regulamin</a></li>
+            <li><a href="#">Polityka prywatności</a></li>
+            <li><a href="#">Odstąpienie od umowy</a></li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3>Informacje</h3>
           <div class="row logos">
             <div class="row col-sm-4 col-md-6">
-              <div class="col-sm-6"><a href="#"><img src="./images/fontello/facebook-circular-logo (2).svg"/></a></div>
-              <div class="col-sm-6"><a href="#"><img src="./images/fontello/instagram (7).svg"/></a></div>
+              <div class="facebook col-sm-5"><a href="#"><img src="./images/fontello/facebook-circular-logo (2).svg"/></a></div>
+              <div class="instagram col-sm-5"><a href="#"><img src="./images/fontello/instagram (7).svg"/></a></div>
             </div>
           </div>
           <div class="contact col-sm-12 col-md-12">
@@ -603,6 +624,5 @@
     </footer>
   </div>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
